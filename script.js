@@ -18,6 +18,19 @@ else if (hourBlock === currentHour){
 else{
     tasks.classList.add('future');
 }
+
+var saveButton = hourID.querySelector('.saveBtn')
+
+var savedTasks = localStorage.getItem(hourBlock)
+
+tasks.value=savedTasks
+
+document.getElementById("saveBtn").addEventListener("click", function(){
+    let taskinput=tasks.value;
+    console.log(taskinput)
+});
+
+
 }
 
 document.querySelectorAll('.row').forEach(sethourBlock)
